@@ -140,11 +140,11 @@ static const NSTimeInterval kQBPopupMenuAnimationDuration = 0.2;
             break;
             
         case QBPopupMenuArrowDirectionLeft:
-            maximumWidth = targetRect.origin.x - self.popupMenuInsets.left;
+            maximumWidth = view.bounds.size.width - (targetRect.origin.x + targetRect.size.width) - self.popupMenuInsets.left;
             break;
             
         case QBPopupMenuArrowDirectionRight:
-            maximumWidth = view.bounds.size.width - (targetRect.origin.x + targetRect.size.width + self.popupMenuInsets.right);
+            maximumWidth = targetRect.origin.x - self.popupMenuInsets.right;
             break;
             
         default:

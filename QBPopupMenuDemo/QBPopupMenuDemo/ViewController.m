@@ -45,6 +45,7 @@
 - (IBAction)showPopupMenu:(id)sender
 {
     UIButton *button = (UIButton *)sender;
+    self.popupMenu.arrowDirection = QBPopupMenuArrowDirectionRight;
     [self.popupMenu showInView:self.view targetRect:button.frame animated:YES];
 }
 
